@@ -77,8 +77,10 @@ namespace MobilizeYou
         {
             DisposeAll();
             //this.ShowRight<FormOrder2>();
-            FormOrder2 frFormOrder2 = new FormOrder2(customerId);
-            frFormOrder2.MdiParent = this;
+            FormOrder2 frFormOrder2 = new FormOrder2(customerId)
+            {
+                MdiParent = this
+            };
             frFormOrder2.Show();
         }
 
@@ -89,7 +91,7 @@ namespace MobilizeYou
 
         private void listOrdersToolStripMenuItem_Click(object sender, EventArgs e)
         {
-          
+
         }
     }
 }
