@@ -46,8 +46,6 @@ namespace MobilizeYou
             this.orderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.createOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listOrdersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reportToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,8 +56,7 @@ namespace MobilizeYou
             this.productToolStripMenuItem,
             this.customersToolStripMenuItem,
             this.employeeToolStripMenuItem,
-            this.orderToolStripMenuItem,
-            this.reportToolStripMenuItem});
+            this.orderToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(709, 24);
@@ -77,7 +74,7 @@ namespace MobilizeYou
             // logoutToolStripMenuItem
             // 
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.logoutToolStripMenuItem.Text = "Logout";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
@@ -146,31 +143,16 @@ namespace MobilizeYou
             // createOrderToolStripMenuItem
             // 
             this.createOrderToolStripMenuItem.Name = "createOrderToolStripMenuItem";
-            this.createOrderToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.createOrderToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.createOrderToolStripMenuItem.Text = "Create Order";
             this.createOrderToolStripMenuItem.Click += new System.EventHandler(this.createOrderToolStripMenuItem_Click);
             // 
             // listOrdersToolStripMenuItem
             // 
             this.listOrdersToolStripMenuItem.Name = "listOrdersToolStripMenuItem";
-            this.listOrdersToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.listOrdersToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.listOrdersToolStripMenuItem.Text = "List Orders";
             this.listOrdersToolStripMenuItem.Click += new System.EventHandler(this.listOrdersToolStripMenuItem_Click);
-            // 
-            // reportToolStripMenuItem
-            // 
-            this.reportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.reportToolStripMenuItem1});
-            this.reportToolStripMenuItem.Name = "reportToolStripMenuItem";
-            this.reportToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
-            this.reportToolStripMenuItem.Text = "Reports";
-            // 
-            // reportToolStripMenuItem1
-            // 
-            this.reportToolStripMenuItem1.Name = "reportToolStripMenuItem1";
-            this.reportToolStripMenuItem1.Size = new System.Drawing.Size(130, 22);
-            this.reportToolStripMenuItem1.Text = "List Report";
-            this.reportToolStripMenuItem1.Click += new System.EventHandler(this.reportToolStripMenuItem1_Click);
             // 
             // FormMain
             // 
@@ -204,8 +186,6 @@ namespace MobilizeYou
         private ToolStripMenuItem orderToolStripMenuItem;
         private ToolStripMenuItem createOrderToolStripMenuItem;
         private ToolStripMenuItem listOrdersToolStripMenuItem;
-        private ToolStripMenuItem reportToolStripMenuItem;
-        private ToolStripMenuItem reportToolStripMenuItem1;
         private ToolStripMenuItem systemToolStripMenuItem;
         private ToolStripMenuItem logoutToolStripMenuItem;
     }

@@ -58,7 +58,7 @@ namespace MobilizeYou
             if (!m.Role.Name.Equals("User")) return;
             productToolStripMenuItem.Visible = false;
             employeeToolStripMenuItem.Visible = false;
-            reportToolStripMenuItem.Visible = false;
+            listOrdersToolStripMenuItem.Visible = false;
         }
 
         private void DisposeAll()
