@@ -73,7 +73,8 @@ namespace MobilizeYou
 
         private void createOrderToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //this.ShowRight<FormOrder>();
+            DisposeAll();
+            this.ShowRight<FormOrder>();
         }
     }
 }

@@ -148,10 +148,10 @@ namespace MobilizeYou
 
         private void buttonSearch_Click(object sender, EventArgs e)
         {
-            var search = textBoxSearch.Text;
+            var search = textBoxSearch.Text.ToLower();
             var list = _productServices.GetAll();
             var listProd = !string.IsNullOrEmpty(search)
-               ? list.Where(x => x.Name.Contains(search)).ToList()
+               ? list.Where(x => x.Name.ToLower().Contains(search)).ToList()
                : list.ToList();
 
             var linq = from s in listProd
@@ -186,6 +186,16 @@ namespace MobilizeYou
                 comboBoxYear.Text = product.YearOfRegistion;
                 comboBoxCategory.Text = product.Category.Name;
             }
+        }
+
+        private void textBoxSearch_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

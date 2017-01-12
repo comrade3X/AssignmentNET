@@ -150,11 +150,11 @@ namespace MobilizeYou
 
         private void buttonSearch_Click(object sender, EventArgs e)
         {
-            var search = textBoxSearch.Text;
+            var search = textBoxSearch.Text.ToLower();
             var list = _membershipServices.GetAll();
 
             var listMem = !string.IsNullOrEmpty(search)
-               ? list.Where(x => x.Username.Contains(search)).ToList()
+               ? list.Where(x => x.Username.ToLower().Contains(search)).ToList()
                : list.ToList();
 
             var linq = from s in listMem

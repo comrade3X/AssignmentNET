@@ -283,6 +283,7 @@
             this.label9.Size = new System.Drawing.Size(35, 13);
             this.label9.TabIndex = 2;
             this.label9.Text = "Name";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // textBoxSearch
             // 
@@ -290,6 +291,7 @@
             this.textBoxSearch.Name = "textBoxSearch";
             this.textBoxSearch.Size = new System.Drawing.Size(272, 20);
             this.textBoxSearch.TabIndex = 3;
+            this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
             // 
             // buttonSearch
             // 

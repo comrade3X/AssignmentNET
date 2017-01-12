@@ -122,10 +122,10 @@ namespace MobilizeYou
 
         private void buttonSearch_Click(object sender, EventArgs e)
         {
-            var search = textBoxSearch.Text;
+            var search = textBoxSearch.Text.ToLower();
             var list = _customersSvervices.GetAll();
             var listCustomers = !string.IsNullOrEmpty(search)
-               ? list.Where(x => x.FullName.Contains(search)).ToList()
+               ? list.Where(x => x.FullName.ToLower().Contains(search)).ToList()
                : list.ToList();
             var linq = from s in listCustomers
                        select new
