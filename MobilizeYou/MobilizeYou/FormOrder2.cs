@@ -14,7 +14,10 @@ namespace MobilizeYou
         public CategoriesServices CategoriesServices;
         public ProductServices ProductServices;
         public OrderDetailsServices OrderDetailsServices;
-        List<OrderDetailsDto> _listOrderDetails = new List<OrderDetailsDto>();
+        public CustomersSvervices CustomersSvervices;
+        List<OrderDetailsView> _listOrderDetails = new List<OrderDetailsView>();
+        public EmployeeServices EmployeeServices;
+        public OrderServices OrderServices;
 
         public FormOrder2()
         {
@@ -23,6 +26,9 @@ namespace MobilizeYou
             CategoriesServices = new CategoriesServices();
             ProductServices = new ProductServices();
             OrderDetailsServices = new OrderDetailsServices();
+            CustomersSvervices = new CustomersSvervices();
+            EmployeeServices = new EmployeeServices();
+            OrderServices = new OrderServices();
 
             FillData();
         }
@@ -90,6 +96,52 @@ namespace MobilizeYou
             comboBoxMake.DataSource = listMakeByCate;
         }
 
+        public override void Refresh()
+        {
+            dataGridViewSearchResults.DataSource = null;
+            dataGridViewOrderDetails.DataSource = null;
+            comboBoxCategory.SelectedIndex = 0;
+            comboBoxMake.SelectedIndex = 0;
+            textBoxName.Text = string.Empty;
+            dateTimePickerFrom.Value = DateTime.Now;
+            dateTimePickerTo.Value = DateTime.Now;
+        }
+
+        public void RefreshAll()
+        {
+            Refresh();
+            textBoxFullName.Text = string.Empty;
+            textBoxIdentityCard.Text = string.Empty;
+            textBoxDriveLicence.Text = string.Empty;
+            textBoxPhoneNumber.Text = string.Empty;
+        }
+
+        /// <summary>
+        /// Validate input customer information
+        /// </summary>
+        /// <param name="fullName"></param>
+        /// <param name="identityCard"></param>
+        /// <param name="driveLicence"></param>
+        /// <param name="phone"></param>
+        /// <returns></returns>
+        private bool Validate(string fullName, string identityCard, string driveLicence, string phone)
+        {
+            var validate = new List<string> { fullName, identityCard, phone };
+            if (validate.Any(x => x.Equals(string.Empty)))
+            {
+                MessageBox.Show(@"Please enter all fields mandatory (with""*"").",
+                    Resources.FormProduct_deleteToolStripMenuItem_Click_Warning, MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                return false;
+            }
+            if (!Helper.IsPhoneNumber(phone))
+            {
+                MessageBox.Show(@"Please enter valid phone number",
+                    Resources.FormProduct_deleteToolStripMenuItem_Click_Warning, MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                return false;
+            }
+            return true;
+        }
+
         #endregion
 
         private void buttonCheck_Click(object sender, EventArgs e)
@@ -145,27 +197,20 @@ namespace MobilizeYou
                     var dateFr = dateTimePickerFrom.Value;
                     var dateTo = dateTimePickerTo.Value;
 
-                    var orderDetailItems = new OrderDetailsDto
+                    var orderDetailItems = new OrderDetailsView
                     {
-                        Product = product,
-                        From = dateFr.ToString("dd MMM yyyy"),
-                        To = dateTo.ToString("dd MMM yyyy")
+                        ProductName = product.Name,
+                        Type = product.Category.Name,
+                        RentPerDay = product.RentPerDay,
+                        ProductId = product.Id,
+                        From = dateFr,
+                        To = dateTo
                     };
 
                     // Refresh dataGridView
                     _listOrderDetails.Add(orderDetailItems);
-                    var linq = from s in _listOrderDetails
-                               select new
-                               {
-                                   s.Product.Name,
-                                   Type = s.Product.Category.Name,
-                                   s.Product.RentPerDay,
-                                   ProductId = s.Product.Id,
-                                   s.From,
-                                   s.To
-                               };
                     dataGridViewOrderDetails.DataSource = null;
-                    dataGridViewOrderDetails.DataSource = linq.ToList();
+                    dataGridViewOrderDetails.DataSource = _listOrderDetails;
                 }
             }
             catch
@@ -174,15 +219,74 @@ namespace MobilizeYou
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonCancel_Click(object sender, EventArgs e)
         {
-            foreach (DataGridViewRow row in dataGridViewSearchResults.Rows)
+            RefreshAll();
+        }
+
+        private void buttonRefresh_Click(object sender, EventArgs e)
+        {
+            Refresh();
+        }
+
+        private void buttonCheckOut_Click(object sender, EventArgs e)
+        {
+            var fullName = textBoxFullName.Text;
+            var identityCard = textBoxIdentityCard.Text;
+            var driveLicence = textBoxDriveLicence.Text;
+            var phone = textBoxPhoneNumber.Text;
+
+            //Validate
+            var fieldValid = Validate(fullName, identityCard, driveLicence, phone);
+            if (!fieldValid)
             {
-                foreach (DataGridViewCell cell in row.Cells)
+                return;
+            }
+
+            var orderDetailsValid = _listOrderDetails.Count > 0;
+            if (!orderDetailsValid)
+            {
+                MessageBox.Show(@"Please add items to order list.");
+                return;
+            }
+
+            try
+            {
+                var list = (List<OrderDetailsView>)dataGridViewOrderDetails.DataSource;
+                var customer = new Customer
                 {
-                    string value = cell.Value.ToString();
-                    MessageBox.Show(value);
-                }
+                    FullName = fullName,
+                    IdentityCardNo = identityCard,
+                    DriveLicenceNo = driveLicence,
+                    PhoneNumber = phone
+                };
+
+                var totalPrice = list.Sum(x => x.RentPerDay);
+
+                var listOrderDetails = list.Select(item => new OrderDetail
+                {
+                    ProductId = item.ProductId,
+                    ValidFrom = item.From,
+                    ValidTo = item.To
+                }).ToList();
+
+                var order = new Order
+                {
+                    Customer = customer,
+                    Seller = 1,
+                    Employee = EmployeeServices.GetById(1),
+                    CreatedDate = DateTime.Now,
+                    TotalPrice = totalPrice,
+                    OrderDetails = listOrderDetails
+                };
+
+                OrderServices.Add(order);
+                MessageBox.Show("Order success");
+                RefreshAll();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }

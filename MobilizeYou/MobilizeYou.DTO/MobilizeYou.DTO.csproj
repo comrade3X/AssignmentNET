@@ -98,6 +98,7 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ModelMobilizeYou.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="App.Config" />
     <None Include="ModelMobilizeYou.edmx.diagram">
       <DependentUpon>ModelMobilizeYou.edmx</DependentUpon>
     </None>

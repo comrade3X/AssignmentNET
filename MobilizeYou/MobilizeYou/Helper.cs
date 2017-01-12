@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using MobilizeYou.BLL;
 
@@ -53,5 +54,12 @@ namespace MobilizeYou
         }
 
         #endregion
+
+        public static bool IsPhoneNumber(string phone)
+        {
+            Regex reg = new Regex(@"^\+?\d{1,3}?[- .]?\(?(?:\d{2,3})\)?[- .]?\d\d\d[- .]?\d\d\d\d$");
+            //--example: 0123456789, +84123456789, +84 123456789, 123-456-789
+            return reg.IsMatch(phone);
+        }
     }
 }

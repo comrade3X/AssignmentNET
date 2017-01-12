@@ -48,19 +48,20 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.addOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dataGridViewOrderDetails = new System.Windows.Forms.DataGridView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBoxFullName = new System.Windows.Forms.TextBox();
-            this.textBoxIdentityCard = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBoxDriveLicence = new System.Windows.Forms.TextBox();
+            this.buttonCancel = new System.Windows.Forms.Button();
+            this.buttonCheckOut = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.textBoxPhoneNumber = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.buttonCheckOut = new System.Windows.Forms.Button();
-            this.buttonCancel = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBoxDriveLicence = new System.Windows.Forms.TextBox();
+            this.textBoxIdentityCard = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBoxFullName = new System.Windows.Forms.TextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dataGridViewOrderDetails = new System.Windows.Forms.DataGridView();
+            this.buttonRefresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -77,9 +78,9 @@
             this.splitContainer3.Panel1.SuspendLayout();
             this.splitContainer3.Panel2.SuspendLayout();
             this.splitContainer3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrderDetails)).BeginInit();
-            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -123,6 +124,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.comboBoxMake);
+            this.groupBox1.Controls.Add(this.buttonRefresh);
             this.groupBox1.Controls.Add(this.buttonCheck);
             this.groupBox1.Controls.Add(this.dateTimePickerTo);
             this.groupBox1.Controls.Add(this.dateTimePickerFrom);
@@ -138,7 +140,7 @@
             this.groupBox1.Size = new System.Drawing.Size(423, 279);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Check Avaiable";
+            this.groupBox1.Text = "Check Available";
             // 
             // comboBoxMake
             // 
@@ -291,6 +293,112 @@
             this.splitContainer3.SplitterDistance = 438;
             this.splitContainer3.TabIndex = 0;
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox4.Controls.Add(this.buttonCancel);
+            this.groupBox4.Controls.Add(this.buttonCheckOut);
+            this.groupBox4.Controls.Add(this.label9);
+            this.groupBox4.Controls.Add(this.label8);
+            this.groupBox4.Controls.Add(this.textBoxPhoneNumber);
+            this.groupBox4.Controls.Add(this.label7);
+            this.groupBox4.Controls.Add(this.textBoxDriveLicence);
+            this.groupBox4.Controls.Add(this.textBoxIdentityCard);
+            this.groupBox4.Controls.Add(this.label2);
+            this.groupBox4.Controls.Add(this.textBoxFullName);
+            this.groupBox4.Location = new System.Drawing.Point(12, 3);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(423, 279);
+            this.groupBox4.TabIndex = 0;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Customer Information";
+            // 
+            // buttonCancel
+            // 
+            this.buttonCancel.Location = new System.Drawing.Point(238, 210);
+            this.buttonCancel.Name = "buttonCancel";
+            this.buttonCancel.Size = new System.Drawing.Size(75, 23);
+            this.buttonCancel.TabIndex = 3;
+            this.buttonCancel.Text = "Cancel";
+            this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
+            // 
+            // buttonCheckOut
+            // 
+            this.buttonCheckOut.Location = new System.Drawing.Point(136, 210);
+            this.buttonCheckOut.Name = "buttonCheckOut";
+            this.buttonCheckOut.Size = new System.Drawing.Size(75, 23);
+            this.buttonCheckOut.TabIndex = 3;
+            this.buttonCheckOut.Text = "Check Out";
+            this.buttonCheckOut.UseVisualStyleBackColor = true;
+            this.buttonCheckOut.Click += new System.EventHandler(this.buttonCheckOut_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(47, 173);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(82, 13);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Phone Number*";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(47, 132);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(76, 13);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Drive Licence:";
+            // 
+            // textBoxPhoneNumber
+            // 
+            this.textBoxPhoneNumber.Location = new System.Drawing.Point(137, 170);
+            this.textBoxPhoneNumber.Name = "textBoxPhoneNumber";
+            this.textBoxPhoneNumber.Size = new System.Drawing.Size(258, 20);
+            this.textBoxPhoneNumber.TabIndex = 2;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(47, 87);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(70, 13);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Identity Card*";
+            // 
+            // textBoxDriveLicence
+            // 
+            this.textBoxDriveLicence.Location = new System.Drawing.Point(137, 129);
+            this.textBoxDriveLicence.Name = "textBoxDriveLicence";
+            this.textBoxDriveLicence.Size = new System.Drawing.Size(258, 20);
+            this.textBoxDriveLicence.TabIndex = 2;
+            // 
+            // textBoxIdentityCard
+            // 
+            this.textBoxIdentityCard.Location = new System.Drawing.Point(137, 84);
+            this.textBoxIdentityCard.Name = "textBoxIdentityCard";
+            this.textBoxIdentityCard.Size = new System.Drawing.Size(258, 20);
+            this.textBoxIdentityCard.TabIndex = 2;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(47, 43);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(58, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Full Name*";
+            // 
+            // textBoxFullName
+            // 
+            this.textBoxFullName.Location = new System.Drawing.Point(137, 40);
+            this.textBoxFullName.Name = "textBoxFullName";
+            this.textBoxFullName.Size = new System.Drawing.Size(258, 20);
+            this.textBoxFullName.TabIndex = 2;
+            // 
             // groupBox2
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -315,109 +423,15 @@
             this.dataGridViewOrderDetails.Size = new System.Drawing.Size(433, 227);
             this.dataGridViewOrderDetails.TabIndex = 0;
             // 
-            // groupBox4
+            // buttonRefresh
             // 
-            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox4.Controls.Add(this.buttonCancel);
-            this.groupBox4.Controls.Add(this.buttonCheckOut);
-            this.groupBox4.Controls.Add(this.label9);
-            this.groupBox4.Controls.Add(this.label8);
-            this.groupBox4.Controls.Add(this.textBoxPhoneNumber);
-            this.groupBox4.Controls.Add(this.label7);
-            this.groupBox4.Controls.Add(this.textBoxDriveLicence);
-            this.groupBox4.Controls.Add(this.textBoxIdentityCard);
-            this.groupBox4.Controls.Add(this.label2);
-            this.groupBox4.Controls.Add(this.textBoxFullName);
-            this.groupBox4.Location = new System.Drawing.Point(12, 3);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(423, 279);
-            this.groupBox4.TabIndex = 0;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Customer Information";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(47, 43);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Full Name:";
-            // 
-            // textBoxFullName
-            // 
-            this.textBoxFullName.Location = new System.Drawing.Point(137, 40);
-            this.textBoxFullName.Name = "textBoxFullName";
-            this.textBoxFullName.Size = new System.Drawing.Size(258, 20);
-            this.textBoxFullName.TabIndex = 2;
-            // 
-            // textBoxIdentityCard
-            // 
-            this.textBoxIdentityCard.Location = new System.Drawing.Point(137, 84);
-            this.textBoxIdentityCard.Name = "textBoxIdentityCard";
-            this.textBoxIdentityCard.Size = new System.Drawing.Size(258, 20);
-            this.textBoxIdentityCard.TabIndex = 2;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(47, 87);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(69, 13);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Identity Card:";
-            // 
-            // textBoxDriveLicence
-            // 
-            this.textBoxDriveLicence.Location = new System.Drawing.Point(137, 129);
-            this.textBoxDriveLicence.Name = "textBoxDriveLicence";
-            this.textBoxDriveLicence.Size = new System.Drawing.Size(258, 20);
-            this.textBoxDriveLicence.TabIndex = 2;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(47, 132);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(76, 13);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Drive Licence:";
-            // 
-            // textBoxPhoneNumber
-            // 
-            this.textBoxPhoneNumber.Location = new System.Drawing.Point(137, 170);
-            this.textBoxPhoneNumber.Name = "textBoxPhoneNumber";
-            this.textBoxPhoneNumber.Size = new System.Drawing.Size(258, 20);
-            this.textBoxPhoneNumber.TabIndex = 2;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(47, 173);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(81, 13);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Phone Number:";
-            // 
-            // buttonCheckOut
-            // 
-            this.buttonCheckOut.Location = new System.Drawing.Point(136, 210);
-            this.buttonCheckOut.Name = "buttonCheckOut";
-            this.buttonCheckOut.Size = new System.Drawing.Size(75, 23);
-            this.buttonCheckOut.TabIndex = 3;
-            this.buttonCheckOut.Text = "Check Out";
-            this.buttonCheckOut.UseVisualStyleBackColor = true;
-            // 
-            // buttonCancel
-            // 
-            this.buttonCancel.Location = new System.Drawing.Point(238, 210);
-            this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(75, 23);
-            this.buttonCancel.TabIndex = 3;
-            this.buttonCancel.Text = "Cancel";
-            this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonRefresh.Location = new System.Drawing.Point(238, 222);
+            this.buttonRefresh.Name = "buttonRefresh";
+            this.buttonRefresh.Size = new System.Drawing.Size(75, 23);
+            this.buttonRefresh.TabIndex = 5;
+            this.buttonRefresh.Text = "Refresh";
+            this.buttonRefresh.UseVisualStyleBackColor = true;
+            this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
             // 
             // FormOrder2
             // 
@@ -446,10 +460,10 @@
             this.splitContainer3.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
             this.splitContainer3.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrderDetails)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrderDetails)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -488,5 +502,6 @@
         private System.Windows.Forms.TextBox textBoxIdentityCard;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBoxFullName;
+        private System.Windows.Forms.Button buttonRefresh;
     }
 }

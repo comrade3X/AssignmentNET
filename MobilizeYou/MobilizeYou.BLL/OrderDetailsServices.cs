@@ -58,7 +58,7 @@ namespace MobilizeYou.BLL
                            select new OrderDetailsDto()
                            {
                                Product = s,
-                               Status = "Avaiable"
+                               Status = "Available"
                            };
 
                 enumerable = res1;
@@ -79,7 +79,7 @@ namespace MobilizeYou.BLL
                                To = p == null ? "" : p.ValidTo.ToString("dd MMM yyyy"),
                                Customer = p == null ? "" : p.Order.Customer.FullName,
                                OrderDate = p == null ? "" : p.Order.CreatedDate.ToString("dd MMM yyyy"),
-                               Status = p == null ? "Avaiable" : "Hired"
+                               Status = p == null ? "Available" : "Hired"
                            };
 
                 enumerable = linq;
