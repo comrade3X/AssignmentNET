@@ -42,7 +42,7 @@ namespace MobilizeYou
         private void membershipToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DisposeAll();
-            //this.ShowRight<FormMembership>();
+            this.ShowRight<FormMembership>();
         }
 
         #region -- Helper --

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.Migrations;
 using System.Linq;
 
 
@@ -73,7 +74,8 @@ namespace MobilizeYou.DAL
 
             using (var db = new MobilizeYouEntities())
             {
-                db.Entry(obj).State = EntityState.Modified;
+                //db.Entry(obj).State = EntityState.Modified;
+                db.Set<Membership>().AddOrUpdate(obj);
                 // other changed properties
                 db.SaveChanges();
             }

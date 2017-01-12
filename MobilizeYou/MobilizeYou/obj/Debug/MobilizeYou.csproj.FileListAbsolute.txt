@@ -40,3 +40,4 @@ C:\Users\Tien Dung\Documents\Visual Studio 2015\Projects\AssignmentNET.git\trunk
 C:\Users\Tien Dung\Documents\Visual Studio 2015\Projects\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Tien Dung\Documents\Visual Studio 2015\Projects\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou\obj\Debug\MobilizeYou.FormCustomers.resources
 C:\Users\Tien Dung\Documents\Visual Studio 2015\Projects\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou\obj\Debug\MobilizeYou.FormEmployee.resources
+C:\Users\Tien Dung\Documents\Visual Studio 2015\Projects\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou\obj\Debug\MobilizeYou.FormMembership.resources
