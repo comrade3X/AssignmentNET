@@ -8,6 +8,7 @@ namespace MobilizeYou.DTO
 {
     public class OrderDetailsDto
     {
+        public OrderDetailsDto() { }
         public System.DateTime ValidFrom { get; set; }
         public System.DateTime ValidTo { get; set; }
 

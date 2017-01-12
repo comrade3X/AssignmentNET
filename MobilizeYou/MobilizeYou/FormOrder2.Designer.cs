@@ -45,10 +45,22 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dataGridViewSearchResults = new System.Windows.Forms.DataGridView();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dataGridViewOrderDetails = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.addOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.splitContainer3 = new System.Windows.Forms.SplitContainer();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dataGridViewOrderDetails = new System.Windows.Forms.DataGridView();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBoxFullName = new System.Windows.Forms.TextBox();
+            this.textBoxIdentityCard = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBoxDriveLicence = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBoxPhoneNumber = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.buttonCheckOut = new System.Windows.Forms.Button();
+            this.buttonCancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -60,9 +72,14 @@
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSearchResults)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
+            this.splitContainer3.Panel1.SuspendLayout();
+            this.splitContainer3.Panel2.SuspendLayout();
+            this.splitContainer3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrderDetails)).BeginInit();
-            this.contextMenuStrip1.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -78,7 +95,7 @@
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.groupBox2);
+            this.splitContainer1.Panel2.Controls.Add(this.splitContainer3);
             this.splitContainer1.Size = new System.Drawing.Size(918, 592);
             this.splitContainer1.SplitterDistance = 294;
             this.splitContainer1.TabIndex = 0;
@@ -127,14 +144,14 @@
             // 
             this.comboBoxMake.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxMake.FormattingEnabled = true;
-            this.comboBoxMake.Location = new System.Drawing.Point(127, 69);
+            this.comboBoxMake.Location = new System.Drawing.Point(138, 72);
             this.comboBoxMake.Name = "comboBoxMake";
             this.comboBoxMake.Size = new System.Drawing.Size(257, 21);
             this.comboBoxMake.TabIndex = 6;
             // 
             // buttonCheck
             // 
-            this.buttonCheck.Location = new System.Drawing.Point(127, 219);
+            this.buttonCheck.Location = new System.Drawing.Point(138, 222);
             this.buttonCheck.Name = "buttonCheck";
             this.buttonCheck.Size = new System.Drawing.Size(75, 23);
             this.buttonCheck.TabIndex = 5;
@@ -144,21 +161,21 @@
             // 
             // dateTimePickerTo
             // 
-            this.dateTimePickerTo.Location = new System.Drawing.Point(127, 175);
+            this.dateTimePickerTo.Location = new System.Drawing.Point(138, 178);
             this.dateTimePickerTo.Name = "dateTimePickerTo";
             this.dateTimePickerTo.Size = new System.Drawing.Size(257, 20);
             this.dateTimePickerTo.TabIndex = 4;
             // 
             // dateTimePickerFrom
             // 
-            this.dateTimePickerFrom.Location = new System.Drawing.Point(126, 146);
+            this.dateTimePickerFrom.Location = new System.Drawing.Point(137, 149);
             this.dateTimePickerFrom.Name = "dateTimePickerFrom";
             this.dateTimePickerFrom.Size = new System.Drawing.Size(258, 20);
             this.dateTimePickerFrom.TabIndex = 4;
             // 
             // textBoxName
             // 
-            this.textBoxName.Location = new System.Drawing.Point(126, 103);
+            this.textBoxName.Location = new System.Drawing.Point(137, 106);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(258, 20);
             this.textBoxName.TabIndex = 2;
@@ -167,7 +184,7 @@
             // 
             this.comboBoxCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxCategory.FormattingEnabled = true;
-            this.comboBoxCategory.Location = new System.Drawing.Point(126, 40);
+            this.comboBoxCategory.Location = new System.Drawing.Point(137, 43);
             this.comboBoxCategory.Name = "comboBoxCategory";
             this.comboBoxCategory.Size = new System.Drawing.Size(258, 21);
             this.comboBoxCategory.TabIndex = 1;
@@ -243,15 +260,46 @@
             this.dataGridViewSearchResults.Size = new System.Drawing.Size(439, 260);
             this.dataGridViewSearchResults.TabIndex = 2;
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addOrderToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(130, 26);
+            // 
+            // addOrderToolStripMenuItem
+            // 
+            this.addOrderToolStripMenuItem.Name = "addOrderToolStripMenuItem";
+            this.addOrderToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.addOrderToolStripMenuItem.Text = "Add Order";
+            this.addOrderToolStripMenuItem.Click += new System.EventHandler(this.addOrderToolStripMenuItem_Click);
+            // 
+            // splitContainer3
+            // 
+            this.splitContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer3.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer3.Name = "splitContainer3";
+            // 
+            // splitContainer3.Panel1
+            // 
+            this.splitContainer3.Panel1.Controls.Add(this.groupBox4);
+            // 
+            // splitContainer3.Panel2
+            // 
+            this.splitContainer3.Panel2.Controls.Add(this.groupBox2);
+            this.splitContainer3.Size = new System.Drawing.Size(918, 294);
+            this.splitContainer3.SplitterDistance = 438;
+            this.splitContainer3.TabIndex = 0;
+            // 
             // groupBox2
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.dataGridViewOrderDetails);
-            this.groupBox2.Location = new System.Drawing.Point(12, 26);
+            this.groupBox2.Location = new System.Drawing.Point(13, 3);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(894, 237);
+            this.groupBox2.Size = new System.Drawing.Size(445, 252);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Order Details";
@@ -262,24 +310,114 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewOrderDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewOrderDetails.Location = new System.Drawing.Point(6, 29);
+            this.dataGridViewOrderDetails.Location = new System.Drawing.Point(6, 19);
             this.dataGridViewOrderDetails.Name = "dataGridViewOrderDetails";
-            this.dataGridViewOrderDetails.Size = new System.Drawing.Size(888, 164);
+            this.dataGridViewOrderDetails.Size = new System.Drawing.Size(433, 227);
             this.dataGridViewOrderDetails.TabIndex = 0;
             // 
-            // contextMenuStrip1
+            // groupBox4
             // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addOrderToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(153, 48);
+            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox4.Controls.Add(this.buttonCancel);
+            this.groupBox4.Controls.Add(this.buttonCheckOut);
+            this.groupBox4.Controls.Add(this.label9);
+            this.groupBox4.Controls.Add(this.label8);
+            this.groupBox4.Controls.Add(this.textBoxPhoneNumber);
+            this.groupBox4.Controls.Add(this.label7);
+            this.groupBox4.Controls.Add(this.textBoxDriveLicence);
+            this.groupBox4.Controls.Add(this.textBoxIdentityCard);
+            this.groupBox4.Controls.Add(this.label2);
+            this.groupBox4.Controls.Add(this.textBoxFullName);
+            this.groupBox4.Location = new System.Drawing.Point(12, 3);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(423, 279);
+            this.groupBox4.TabIndex = 0;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Customer Information";
             // 
-            // addOrderToolStripMenuItem
+            // label2
             // 
-            this.addOrderToolStripMenuItem.Name = "addOrderToolStripMenuItem";
-            this.addOrderToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.addOrderToolStripMenuItem.Text = "Add Order";
-            this.addOrderToolStripMenuItem.Click += new System.EventHandler(this.addOrderToolStripMenuItem_Click);
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(47, 43);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(57, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Full Name:";
+            // 
+            // textBoxFullName
+            // 
+            this.textBoxFullName.Location = new System.Drawing.Point(137, 40);
+            this.textBoxFullName.Name = "textBoxFullName";
+            this.textBoxFullName.Size = new System.Drawing.Size(258, 20);
+            this.textBoxFullName.TabIndex = 2;
+            // 
+            // textBoxIdentityCard
+            // 
+            this.textBoxIdentityCard.Location = new System.Drawing.Point(137, 84);
+            this.textBoxIdentityCard.Name = "textBoxIdentityCard";
+            this.textBoxIdentityCard.Size = new System.Drawing.Size(258, 20);
+            this.textBoxIdentityCard.TabIndex = 2;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(47, 87);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(69, 13);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Identity Card:";
+            // 
+            // textBoxDriveLicence
+            // 
+            this.textBoxDriveLicence.Location = new System.Drawing.Point(137, 129);
+            this.textBoxDriveLicence.Name = "textBoxDriveLicence";
+            this.textBoxDriveLicence.Size = new System.Drawing.Size(258, 20);
+            this.textBoxDriveLicence.TabIndex = 2;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(47, 132);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(76, 13);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Drive Licence:";
+            // 
+            // textBoxPhoneNumber
+            // 
+            this.textBoxPhoneNumber.Location = new System.Drawing.Point(137, 170);
+            this.textBoxPhoneNumber.Name = "textBoxPhoneNumber";
+            this.textBoxPhoneNumber.Size = new System.Drawing.Size(258, 20);
+            this.textBoxPhoneNumber.TabIndex = 2;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(47, 173);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(81, 13);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Phone Number:";
+            // 
+            // buttonCheckOut
+            // 
+            this.buttonCheckOut.Location = new System.Drawing.Point(136, 210);
+            this.buttonCheckOut.Name = "buttonCheckOut";
+            this.buttonCheckOut.Size = new System.Drawing.Size(75, 23);
+            this.buttonCheckOut.TabIndex = 3;
+            this.buttonCheckOut.Text = "Check Out";
+            this.buttonCheckOut.UseVisualStyleBackColor = true;
+            // 
+            // buttonCancel
+            // 
+            this.buttonCancel.Location = new System.Drawing.Point(238, 210);
+            this.buttonCancel.Name = "buttonCancel";
+            this.buttonCancel.Size = new System.Drawing.Size(75, 23);
+            this.buttonCancel.TabIndex = 3;
+            this.buttonCancel.Text = "Cancel";
+            this.buttonCancel.UseVisualStyleBackColor = true;
             // 
             // FormOrder2
             // 
@@ -303,9 +441,15 @@
             this.groupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSearchResults)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
+            this.splitContainer3.Panel1.ResumeLayout(false);
+            this.splitContainer3.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
+            this.splitContainer3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrderDetails)).EndInit();
-            this.contextMenuStrip1.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -327,10 +471,22 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridViewSearchResults;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DataGridView dataGridViewOrderDetails;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem addOrderToolStripMenuItem;
+        private System.Windows.Forms.SplitContainer splitContainer3;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.DataGridView dataGridViewOrderDetails;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Button buttonCancel;
+        private System.Windows.Forms.Button buttonCheckOut;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textBoxPhoneNumber;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBoxDriveLicence;
+        private System.Windows.Forms.TextBox textBoxIdentityCard;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBoxFullName;
     }
 }

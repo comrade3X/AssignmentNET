@@ -40,10 +40,11 @@ namespace MobilizeYou.BLL
             return res;
         }
 
-        public List<OrderDetailsDto> Search(DateTime dateFrom, DateTime dateTo)
+        public List<OrderDetailsDto> Search(DateTime dateFrom, DateTime dateTo, string cat, string make, string name)
         {
-            ProductServices productServices = new ProductServices();
+            var productServices = new ProductServices();
             var listProduct = productServices.GetAll();
+            IEnumerable<OrderDetailsDto> enumerable;
 
             if (listProduct == null)
             {
@@ -59,27 +60,51 @@ namespace MobilizeYou.BLL
                                Product = s,
                                Status = "Avaiable"
                            };
-                return res1.ToList();
-            }
-            var linq = from product in listProduct
-                       join orderDetail in listOrderDetails on product.Id equals orderDetail.Product.Id
-                       into ps
-                       from p in ps.DefaultIfEmpty()
-                       select new OrderDetailsDto
-                       {
-                           OrderDetailId = p == null ? 0 : p.Id,
-                           Product = product,
-                           Type = p == null ? "" : p.Product.Category.Name,
-                           ProductName = p == null ? "" : p.Product.Name,
-                           From = p == null ? "" : p.ValidFrom.ToString("dd MMM yyyy"),
-                           To = p == null ? "" : p.ValidTo.ToString("dd MMM yyyy"),
-                           Customer = p == null ? "" : p.Order.Customer.FullName,
-                           OrderDate = p == null ? "" : p.Order.CreatedDate.ToString("dd MMM yyyy"),
-                           Status = p == null ? "Avaiable" : "Hired"
-                       };
-            var res = linq.ToList();
 
-            return res;
+                enumerable = res1;
+            }
+            else
+            {
+                var linq = from product in listProduct
+                           join orderDetail in listOrderDetails on product.Id equals orderDetail.Product.Id
+                           into ps
+                           from p in ps.DefaultIfEmpty()
+                           select new OrderDetailsDto
+                           {
+                               OrderDetailId = p == null ? 0 : p.Id,
+                               Product = product,
+                               Type = p == null ? "" : p.Product.Category.Name,
+                               ProductName = p == null ? "" : p.Product.Name,
+                               From = p == null ? "" : p.ValidFrom.ToString("dd MMM yyyy"),
+                               To = p == null ? "" : p.ValidTo.ToString("dd MMM yyyy"),
+                               Customer = p == null ? "" : p.Order.Customer.FullName,
+                               OrderDate = p == null ? "" : p.Order.CreatedDate.ToString("dd MMM yyyy"),
+                               Status = p == null ? "Avaiable" : "Hired"
+                           };
+
+                enumerable = linq;
+            }
+
+            if (!string.IsNullOrEmpty(cat) && !"All".Equals(cat))
+            {
+                enumerable = enumerable.Where(x => cat.Equals(x.Product.Category.Name));
+            }
+
+            if (!string.IsNullOrEmpty(make) && !"All".Equals(make))
+            {
+                enumerable = enumerable.Where(x => make.Equals(x.Product.Make));
+            }
+
+            if (!string.IsNullOrEmpty(name))
+            {
+                enumerable = enumerable.Where(x => x.Product.Name.ToLower().Contains(name.ToLower()));
+            }
+
+            enumerable = enumerable.OrderBy(x => x.Status)
+                    .ThenBy(x => x.Type)
+                    .ThenBy(x => x.Product.Name).ToList();
+
+            return enumerable.ToList();
         }
     }
 }

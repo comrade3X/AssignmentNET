@@ -1,12 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using MobilizeYou.DTO;
 using MobilizeYou.Properties;
 
 
@@ -18,6 +14,7 @@ namespace MobilizeYou
         public CategoriesServices CategoriesServices;
         public ProductServices ProductServices;
         public OrderDetailsServices OrderDetailsServices;
+        List<OrderDetailsDto> _listOrderDetails = new List<OrderDetailsDto>();
 
         public FormOrder2()
         {
@@ -46,11 +43,13 @@ namespace MobilizeYou
             try
             {
                 var listCategory = CategoriesServices.GetAll();
+                listCategory.Insert(0, new Category { Name = "All" });
                 comboBoxCategory.DataSource = listCategory;
                 comboBoxCategory.DisplayMember = "Name";
                 comboBoxCategory.ValueMember = "Id";
 
                 CascadeCb(null);
+                dataGridViewOrderDetails.DataSource = _listOrderDetails;
             }
             catch (Exception ex)
             {
@@ -65,6 +64,7 @@ namespace MobilizeYou
         private void CascadeCb(string cat)
         {
             List<string> listMakeByCate;
+
             if (string.IsNullOrEmpty(cat))
             {
                 listMakeByCate = (from s in ProductServices.GetAll()
@@ -83,6 +83,10 @@ namespace MobilizeYou
             {
                 listMakeByCate.Add("No items.");
             }
+            else
+            {
+                listMakeByCate.Insert(0, "All");
+            }
             comboBoxMake.DataSource = listMakeByCate;
         }
 
@@ -94,25 +98,28 @@ namespace MobilizeYou
             {
                 var dateFr = dateTimePickerFrom.Value;
                 var dateTo = dateTimePickerTo.Value;
+                var category = comboBoxCategory.Text;
+                var make = comboBoxMake.Text;
+                var name = textBoxName.Text;
 
-                var results = OrderDetailsServices.Search(dateFr, dateTo);
+                var searchResults = OrderDetailsServices.Search(dateFr, dateTo, category, make, name);
 
-                var linq = from s in results
+                var linq = from s in searchResults
                            select new
                            {
                                s.Status,
                                s.Product.Name,
                                Type = s.Product.Category.Name,
                                s.Product.RentPerDay,
+                               ProductId = s.Product.Id,
                                s.From,
                                s.To,
                                s.Customer,
                                s.OrderDate
                            };
 
-                dataGridViewSearchResults.DataSource = linq.ToList()
-                    .OrderBy(x => x.Status)
-                    .ThenBy(x => x.Type).ThenBy(x => x.Name).ToList();
+                dataGridViewSearchResults.DataSource = linq.ToList();
+
             }
             catch (Exception ex)
             {
@@ -122,15 +129,60 @@ namespace MobilizeYou
 
         private void addOrderToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (dataGridViewSearchResults.CurrentRow != null)
+            try
             {
-                var status = dataGridViewSearchResults.CurrentRow.Cells[0].Value;
-                if ("Hired".Equals(status))
+                if (dataGridViewSearchResults.CurrentRow != null)
                 {
-                    MessageBox.Show(Resources.FormOrder2_addOrderToolStripMenuItem_Click_Cannot_order_this_items);
-                    return;
-                }
+                    var status = dataGridViewSearchResults.CurrentRow.Cells[0].Value;
+                    if ("Hired".Equals(status))
+                    {
+                        MessageBox.Show(Resources.FormOrder2_addOrderToolStripMenuItem_Click_Cannot_order_this_items);
+                        return;
+                    }
 
+                    var productId = Convert.ToInt32(dataGridViewSearchResults.CurrentRow.Cells[4].Value);
+                    var product = ProductServices.GetById(productId);
+                    var dateFr = dateTimePickerFrom.Value;
+                    var dateTo = dateTimePickerTo.Value;
+
+                    var orderDetailItems = new OrderDetailsDto
+                    {
+                        Product = product,
+                        From = dateFr.ToString("dd MMM yyyy"),
+                        To = dateTo.ToString("dd MMM yyyy")
+                    };
+
+                    // Refresh dataGridView
+                    _listOrderDetails.Add(orderDetailItems);
+                    var linq = from s in _listOrderDetails
+                               select new
+                               {
+                                   s.Product.Name,
+                                   Type = s.Product.Category.Name,
+                                   s.Product.RentPerDay,
+                                   ProductId = s.Product.Id,
+                                   s.From,
+                                   s.To
+                               };
+                    dataGridViewOrderDetails.DataSource = null;
+                    dataGridViewOrderDetails.DataSource = linq.ToList();
+                }
+            }
+            catch
+            {
+                MessageBox.Show(Resources.FormLogin_buttonLogin_Click_Error);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dataGridViewSearchResults.Rows)
+            {
+                foreach (DataGridViewCell cell in row.Cells)
+                {
+                    string value = cell.Value.ToString();
+                    MessageBox.Show(value);
+                }
             }
         }
     }

@@ -14,4 +14,3 @@ C:\Users\Tien Dung\Documents\Visual Studio 2015\Projects\AssignmentNET.git\trunk
 C:\Users\Tien Dung\Documents\Visual Studio 2015\Projects\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou.DTO\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Tien Dung\Documents\Visual Studio 2015\Projects\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou.DTO\obj\Debug\MobilizeYou.DTO.dll
 C:\Users\Tien Dung\Documents\Visual Studio 2015\Projects\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou.DTO\obj\Debug\MobilizeYou.DTO.pdb
-C:\Users\Tien Dung\Documents\Visual Studio 2015\Projects\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou.DTO\obj\Debug\MobilizeYou.DTO.csprojResolveAssemblyReference.cache
