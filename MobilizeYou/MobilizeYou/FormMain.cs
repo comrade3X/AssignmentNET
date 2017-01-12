@@ -91,7 +91,8 @@ namespace MobilizeYou
 
         private void listOrdersToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            DisposeAll();
+            this.ShowRight<FormListOrders>();
         }
     }
 }

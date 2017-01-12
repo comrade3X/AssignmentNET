@@ -157,7 +157,7 @@ namespace MobilizeYou
                 var make = comboBoxMake.Text;
                 var name = textBoxName.Text;
 
-                var searchResults = OrderDetailsServices.Search(dateFr, dateTo, category, make, name);
+                var searchResults = OrderDetailsServices.Search(dateFr, dateTo, category, make, name, null);
 
                 var linq = from s in searchResults
                            select new

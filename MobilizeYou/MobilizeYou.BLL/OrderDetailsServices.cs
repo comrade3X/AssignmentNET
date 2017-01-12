@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace MobilizeYou.BLL
 {
@@ -40,7 +41,7 @@ namespace MobilizeYou.BLL
             return res;
         }
 
-        public List<OrderDetailsDto> Search(DateTime dateFrom, DateTime dateTo, string cat, string make, string name)
+        public List<OrderDetailsDto> Search(DateTime dateFrom, DateTime dateTo, string cat, string make, string name, string sellerName)
         {
             var productServices = new ProductServices();
             var listProduct = productServices.GetAll();
@@ -100,11 +101,55 @@ namespace MobilizeYou.BLL
                 enumerable = enumerable.Where(x => x.Product.Name.ToLower().Contains(name.ToLower()));
             }
 
+            if (!string.IsNullOrEmpty(sellerName))
+            {
+                enumerable = enumerable.Where(x => x.Employee.FullName.Equals(sellerName));
+            }
+
             enumerable = enumerable.OrderBy(x => x.Status)
                     .ThenBy(x => x.Type)
                     .ThenBy(x => x.Product.Name).ToList();
 
             return enumerable.ToList();
+        }
+
+        public List<OrderDetail> Search2(DateTime dateFr, DateTime dateTo, int sellerId, string customerInfo)
+        {
+
+            //Logic: startA >= startB && endB >= endA
+            var listSearch = _orderDetailDao.GetAll().Where(x => x.ValidFrom >= dateFr && dateTo >= x.ValidTo).GroupBy(x => x.Order.Id).Select(x => x.First());
+
+            //Search by customer information
+            if (!string.IsNullOrEmpty(customerInfo))
+            {
+                listSearch = listSearch.Where(x => x.Order.Customer.FullName.ToLower().Contains(customerInfo.ToLower()));
+            }
+
+            var reg = new Regex(@" ^\d$");
+
+            var customerId = 0;
+            if (customerInfo != null && reg.IsMatch(customerInfo))
+            {
+                customerId = Convert.ToInt32(customerInfo);
+            }
+            if (customerId > 0)
+            {
+                listSearch = listSearch.Where(x => x.Order.Customer.Id == customerId);
+            }
+
+            //Search by seller
+            if (sellerId > 0)
+            {
+                listSearch = listSearch.Where(x => x.Order.Employee.Id == sellerId);
+            }
+
+            var res = listSearch.ToList();
+            return res;
+        }
+
+        public List<OrderDetail> GetByOrderId(int orderId)
+        {
+            return GetAll().Where(x => x.OrderId == orderId).ToList();
         }
     }
 }

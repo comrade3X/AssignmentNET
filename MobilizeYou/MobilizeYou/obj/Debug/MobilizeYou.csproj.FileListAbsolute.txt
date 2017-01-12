@@ -44,3 +44,4 @@ C:\Users\Tien Dung\Documents\Visual Studio 2015\Projects\AssignmentNET.git\trunk
 C:\Users\Tien Dung\Documents\Visual Studio 2015\Projects\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou\obj\Debug\MobilizeYou.exe
 C:\Users\Tien Dung\Documents\Visual Studio 2015\Projects\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou\obj\Debug\MobilizeYou.pdb
 C:\Users\Tien Dung\Documents\Visual Studio 2015\Projects\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou\obj\Debug\MobilizeYou.FormOrderBilling.resources
+C:\Users\Tien Dung\Documents\Visual Studio 2015\Projects\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou\obj\Debug\MobilizeYou.FormListOrders.resources

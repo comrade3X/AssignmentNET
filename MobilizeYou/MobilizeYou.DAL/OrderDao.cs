@@ -37,6 +37,7 @@ namespace MobilizeYou.DAL
                     Id = s.Id,
                     Customer = s.Customer,
                     Seller = s.Seller,
+                    Employee = s.Employee,
                     TotalPrice = s.TotalPrice,
                     CreatedDate = s.CreatedDate,
                     CustomerId = s.CustomerId

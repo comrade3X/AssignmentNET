@@ -61,8 +61,8 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dataGridViewSearchResults = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.addOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addOrderToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.addOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
             this.splitContainer3.Panel1.SuspendLayout();
             this.splitContainer3.Panel2.SuspendLayout();
@@ -97,7 +97,7 @@
             // splitContainer3.Panel2
             // 
             this.splitContainer3.Panel2.Controls.Add(this.groupBox2);
-            this.splitContainer3.Size = new System.Drawing.Size(1222, 415);
+            this.splitContainer3.Size = new System.Drawing.Size(1222, 370);
             this.splitContainer3.SplitterDistance = 583;
             this.splitContainer3.TabIndex = 0;
             // 
@@ -118,7 +118,7 @@
             this.groupBox4.Controls.Add(this.textBoxFullName);
             this.groupBox4.Location = new System.Drawing.Point(12, 3);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(568, 400);
+            this.groupBox4.Size = new System.Drawing.Size(568, 355);
             this.groupBox4.TabIndex = 0;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Customer Information";
@@ -215,7 +215,7 @@
             this.groupBox2.Controls.Add(this.dataGridViewOrderDetails);
             this.groupBox2.Location = new System.Drawing.Point(13, 3);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(604, 373);
+            this.groupBox2.Size = new System.Drawing.Size(604, 328);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Order Details";
@@ -228,7 +228,7 @@
             this.dataGridViewOrderDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewOrderDetails.Location = new System.Drawing.Point(6, 19);
             this.dataGridViewOrderDetails.Name = "dataGridViewOrderDetails";
-            this.dataGridViewOrderDetails.Size = new System.Drawing.Size(592, 348);
+            this.dataGridViewOrderDetails.Size = new System.Drawing.Size(592, 303);
             this.dataGridViewOrderDetails.TabIndex = 0;
             // 
             // splitContainer1
@@ -245,8 +245,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer3);
-            this.splitContainer1.Size = new System.Drawing.Size(1222, 831);
-            this.splitContainer1.SplitterDistance = 412;
+            this.splitContainer1.Size = new System.Drawing.Size(1222, 741);
+            this.splitContainer1.SplitterDistance = 367;
             this.splitContainer1.TabIndex = 2;
             // 
             // splitContainer2
@@ -262,7 +262,7 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.groupBox3);
-            this.splitContainer2.Size = new System.Drawing.Size(1222, 412);
+            this.splitContainer2.Size = new System.Drawing.Size(1222, 367);
             this.splitContainer2.SplitterDistance = 583;
             this.splitContainer2.TabIndex = 0;
             // 
@@ -285,7 +285,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(568, 397);
+            this.groupBox1.Size = new System.Drawing.Size(568, 352);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Check Available";
@@ -403,7 +403,7 @@
             this.groupBox3.Controls.Add(this.dataGridViewSearchResults);
             this.groupBox3.Location = new System.Drawing.Point(13, 12);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(610, 400);
+            this.groupBox3.Size = new System.Drawing.Size(610, 355);
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Search Result";
@@ -417,7 +417,7 @@
             this.dataGridViewSearchResults.ContextMenuStrip = this.contextMenuStrip1;
             this.dataGridViewSearchResults.Location = new System.Drawing.Point(6, 19);
             this.dataGridViewSearchResults.Name = "dataGridViewSearchResults";
-            this.dataGridViewSearchResults.Size = new System.Drawing.Size(598, 378);
+            this.dataGridViewSearchResults.Size = new System.Drawing.Size(598, 333);
             this.dataGridViewSearchResults.TabIndex = 2;
             // 
             // contextMenuStrip1
@@ -425,7 +425,14 @@
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addOrderToolStripMenuItem1});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(153, 48);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(130, 26);
+            // 
+            // addOrderToolStripMenuItem1
+            // 
+            this.addOrderToolStripMenuItem1.Name = "addOrderToolStripMenuItem1";
+            this.addOrderToolStripMenuItem1.Size = new System.Drawing.Size(129, 22);
+            this.addOrderToolStripMenuItem1.Text = "Add Order";
+            this.addOrderToolStripMenuItem1.Click += new System.EventHandler(this.addOrderToolStripMenuItem_Click);
             // 
             // addOrderToolStripMenuItem
             // 
@@ -433,18 +440,11 @@
             this.addOrderToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.addOrderToolStripMenuItem.Text = "Add Order";
             // 
-            // addOrderToolStripMenuItem1
-            // 
-            this.addOrderToolStripMenuItem1.Name = "addOrderToolStripMenuItem1";
-            this.addOrderToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.addOrderToolStripMenuItem1.Text = "Add Order";
-            this.addOrderToolStripMenuItem1.Click += new System.EventHandler(this.addOrderToolStripMenuItem_Click);
-            // 
             // FormOrder2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1222, 831);
+            this.ClientSize = new System.Drawing.Size(1222, 741);
             this.Controls.Add(this.splitContainer1);
             this.Name = "FormOrder2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

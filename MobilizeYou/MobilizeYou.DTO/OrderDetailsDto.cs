@@ -42,15 +42,25 @@ namespace MobilizeYou.DTO
 
     public class OrderDetailsView
     {
+        public string Type { get; set; }
         public string ProductName { get; set; }
 
         public decimal RentPerDay { get; set; }
 
-        public int ProductId { get; set; }
-
         public DateTime From { get; set; }
 
         public DateTime To { get; set; }
-        public string Type { get; set; }
+
+        public int ProductId { get; set; }
+    }
+
+    public class OrderView
+    {
+        public int OrderId { get; set; }
+        public string Customer { get; set; }
+        public string TotalAmount { get; set; }
+        public string CreatedDate { get; set; }
+        public string Seller { get; set; }
+
     }
 }

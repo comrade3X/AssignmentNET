@@ -31,7 +31,9 @@ namespace MobilizeYou
                            ProductName = product.Name,
                            product.Make,
                            product.Model,
-                           Price = @"$" + product.RentPerDay
+                           Price = @"$" + product.RentPerDay,
+                           From = s.ValidFrom.ToString("dd MMM yyyy"),
+                           To = s.ValidTo.ToString("dd MMM yyyy")
                        };
 
             dataGridViewProducts.DataSource = linq.ToList();
