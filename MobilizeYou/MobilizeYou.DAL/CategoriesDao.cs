@@ -1,4 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.Entity;
 using System.Linq;
 
 
@@ -42,7 +45,23 @@ namespace MobilizeYou.DAL
         {
             using (var db = new MobilizeYouEntities())
             {
+                db.Categories.Attach(obj);
                 db.Categories.Remove(obj);
+                db.SaveChanges();
+            }
+        }
+
+        public void Update(Category obj)
+        {
+            if (obj == null)
+            {
+                throw new ArgumentNullException("");
+            }
+
+            using (var db = new MobilizeYouEntities())
+            {
+                db.Entry(obj).State = EntityState.Modified;
+                // other changed properties
                 db.SaveChanges();
             }
         }

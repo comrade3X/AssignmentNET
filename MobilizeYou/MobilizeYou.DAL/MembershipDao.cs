@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 
 
@@ -18,7 +20,9 @@ namespace MobilizeYou.DAL
                                 Employee = s.Employee,
                                 Role = s.Role,
                                 Username = s.Username,
-                                Password = s.Password
+                                Password = s.Password,
+                                EmployeeId = s.EmployeeId,
+                                RoleId = s.RoleId
                             };
                 return query.ToList();
             }
@@ -54,10 +58,25 @@ namespace MobilizeYou.DAL
         {
             using (MobilizeYouEntities db = new MobilizeYouEntities())
             {
+                db.Memberships.Attach(obj);
                 db.Memberships.Remove(obj);
                 db.SaveChanges();
             }
         }
 
+        public void Update(Membership obj)
+        {
+            if (obj == null)
+            {
+                throw new ArgumentNullException("");
+            }
+
+            using (var db = new MobilizeYouEntities())
+            {
+                db.Entry(obj).State = EntityState.Modified;
+                // other changed properties
+                db.SaveChanges();
+            }
+        }
     }
 }

@@ -15,5 +15,7 @@ namespace MobilizeYou.BLL
         void Add(TE obj);
 
         void Delete(TE obj);
+
+        void Update(TE obj);
     }
 }

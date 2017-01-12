@@ -36,3 +36,6 @@ C:\Users\Tien Dung\Documents\Visual Studio 2015\Projects\AssignmentNET.git\trunk
 C:\Users\Tien Dung\Documents\Visual Studio 2015\Projects\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou\obj\Debug\MobilizeYou.FormProduct.resources
 C:\Users\Tien Dung\Documents\Visual Studio 2015\Projects\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou\obj\Debug\MobilizeYou.Properties.Resources.resources
 C:\Users\Tien Dung\Documents\Visual Studio 2015\Projects\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou\obj\Debug\MobilizeYou.csproj.GenerateResource.Cache
+C:\Users\Tien Dung\Documents\Visual Studio 2015\Projects\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Tien Dung\Documents\Visual Studio 2015\Projects\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Tien Dung\Documents\Visual Studio 2015\Projects\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou\obj\Debug\MobilizeYou.FormCustomers.resources

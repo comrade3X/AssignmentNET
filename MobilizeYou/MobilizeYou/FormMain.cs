@@ -24,7 +24,7 @@ namespace MobilizeYou
         private void listCustomersToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DisposeAll();
-            //this.ShowRight<FormCustomers>();
+            this.ShowRight<FormCustomers>();
         }
 
         private void listProductToolStripMenuItem_Click(object sender, EventArgs e)

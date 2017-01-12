@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 
 
@@ -18,7 +20,8 @@ namespace MobilizeYou.DAL
                                 Customer = s.Customer,
                                 Seller = s.Seller,
                                 TotalPrice = s.TotalPrice,
-                                CreatedDate = s.CreatedDate
+                                CreatedDate = s.CreatedDate,
+                                CustomerId = s.CustomerId
                             };
                 return query.ToList();
             }
@@ -35,7 +38,8 @@ namespace MobilizeYou.DAL
                     Customer = s.Customer,
                     Seller = s.Seller,
                     TotalPrice = s.TotalPrice,
-                    CreatedDate = s.CreatedDate
+                    CreatedDate = s.CreatedDate,
+                    CustomerId = s.CustomerId
                 };
                 return order;
             }
@@ -54,10 +58,25 @@ namespace MobilizeYou.DAL
         {
             using (var db = new MobilizeYouEntities())
             {
+                db.Orders.Attach(obj);
                 db.Orders.Remove(obj);
                 db.SaveChanges();
             }
         }
 
+        public void Update(Order obj)
+        {
+            if (obj == null)
+            {
+                throw new ArgumentNullException("");
+            }
+
+            using (var db = new MobilizeYouEntities())
+            {
+                db.Entry(obj).State = EntityState.Modified;
+                // other changed properties
+                db.SaveChanges();
+            }
+        }
     }
 }

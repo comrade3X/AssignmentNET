@@ -26,5 +26,10 @@ namespace MobilizeYou.BLL
         {
             _categoriesDao.Delete(obj);
         }
+
+        public void Update(Category obj)
+        {
+            _categoriesDao.Update(obj);
+        }
     }
 }

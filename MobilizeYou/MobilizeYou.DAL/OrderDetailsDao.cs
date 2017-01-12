@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 
 
@@ -18,7 +20,9 @@ namespace MobilizeYou.DAL
                                 Order = s.Order,
                                 Product = s.Product,
                                 ValidFrom = s.ValidFrom,
-                                ValidTo = s.ValidTo
+                                ValidTo = s.ValidTo,
+                                OrderId = s.OrderId,
+                                ProductId = s.ProductId
                             };
                 return query.ToList();
             }
@@ -35,7 +39,9 @@ namespace MobilizeYou.DAL
                     Order = s.Order,
                     Product = s.Product,
                     ValidFrom = s.ValidFrom,
-                    ValidTo = s.ValidTo
+                    ValidTo = s.ValidTo,
+                    OrderId = s.OrderId,
+                    ProductId = s.ProductId
                 };
                 return od;
             }
@@ -54,10 +60,25 @@ namespace MobilizeYou.DAL
         {
             using (var db = new MobilizeYouEntities())
             {
+                db.OrderDetails.Attach(obj);
                 db.OrderDetails.Remove(obj);
                 db.SaveChanges();
             }
         }
 
+        public void Update(OrderDetail obj)
+        {
+            if (obj == null)
+            {
+                throw new ArgumentNullException("");
+            }
+
+            using (var db = new MobilizeYouEntities())
+            {
+                db.Entry(obj).State = EntityState.Modified;
+                // other changed properties
+                db.SaveChanges();
+            }
+        }
     }
 }
