@@ -142,6 +142,15 @@ namespace MobilizeYou.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cannot order this items.
+        /// </summary>
+        internal static string FormOrder2_addOrderToolStripMenuItem_Click_Cannot_order_this_items {
+            get {
+                return ResourceManager.GetString("FormOrder2_addOrderToolStripMenuItem_Click_Cannot_order_this_items", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Are you sure?.
         /// </summary>
         internal static string FormProduct_deleteToolStripMenuItem_Click_Are_you_sure_ {

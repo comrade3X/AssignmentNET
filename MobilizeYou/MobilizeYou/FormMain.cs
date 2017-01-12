@@ -74,7 +74,7 @@ namespace MobilizeYou
         private void createOrderToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DisposeAll();
-            this.ShowRight<FormOrder>();
+            this.ShowRight<FormOrder2>();
         }
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)

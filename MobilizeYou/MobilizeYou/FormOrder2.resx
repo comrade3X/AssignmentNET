@@ -117,49 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="FormCustomers_deleteToolStripMenuItem_Click_Are_you_sure_" xml:space="preserve">
-    <value>Are you sure?</value>
-  </data>
-  <data name="FormCustomers_FillData_Drive_Licence" xml:space="preserve">
-    <value>Drive Licence</value>
-  </data>
-  <data name="FormCustomers_FillData_Full_Name" xml:space="preserve">
-    <value>Full Name</value>
-  </data>
-  <data name="FormCustomers_FillData_Id" xml:space="preserve">
-    <value>Id</value>
-  </data>
-  <data name="FormCustomers_FillData_Identity_Card" xml:space="preserve">
-    <value>Identity Card</value>
-  </data>
-  <data name="FormCustomers_FillData_Phone_Number" xml:space="preserve">
-    <value>Phone Number</value>
-  </data>
-  <data name="FormEmployee_Refresh__0" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="FormProduct_deleteToolStripMenuItem_Click_Are_you_sure_" xml:space="preserve">
-    <value>Are you sure?</value>
-  </data>
-  <data name="FormProduct_deleteToolStripMenuItem_Click_Delete_Fail_" xml:space="preserve">
-    <value>Delete Fail.</value>
-  </data>
-  <data name="FormProduct_deleteToolStripMenuItem_Click_Delete_Successfully_" xml:space="preserve">
-    <value>Delete Successfully.</value>
-  </data>
-  <data name="FormProduct_deleteToolStripMenuItem_Click_Warning" xml:space="preserve">
-    <value>Warning</value>
-  </data>
-  <data name="FormProduct_Refresh__0_0" xml:space="preserve">
-    <value>0.0</value>
-  </data>
-  <data name="FormLogin_buttonLogin_Click_User_name_or_Password_is_invalid_" xml:space="preserve">
-    <value>User name or Password is invalid.</value>
-  </data>
-  <data name="FormLogin_buttonLogin_Click_Error" xml:space="preserve">
-    <value>Error</value>
-  </data>
-  <data name="FormOrder2_addOrderToolStripMenuItem_Click_Cannot_order_this_items" xml:space="preserve">
-    <value>Cannot order this items</value>
-  </data>
+  <metadata name="contextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>

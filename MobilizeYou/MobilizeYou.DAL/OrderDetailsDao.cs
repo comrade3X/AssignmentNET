@@ -9,42 +9,41 @@ namespace MobilizeYou.DAL
     using DTO;
     public class OrderDetailDetailsDao : IDao<OrderDetail>
     {
+        private MobilizeYouEntities _db = new MobilizeYouEntities();
+        public OrderDetailDetailsDao()
+        {
+
+        }
         public List<OrderDetail> GetAll()
         {
-            using (var db = new MobilizeYouEntities())
-            {
-                var query = from s in db.OrderDetails.ToList()
-                            select new OrderDetail
-                            {
-                                Id = s.Id,
-                                Order = s.Order,
-                                Product = s.Product,
-                                ValidFrom = s.ValidFrom,
-                                ValidTo = s.ValidTo,
-                                OrderId = s.OrderId,
-                                ProductId = s.ProductId
-                            };
-                return query.ToList();
-            }
+            var query = from s in _db.OrderDetails.ToList()
+                        select new OrderDetail
+                        {
+                            Id = s.Id,
+                            Order = s.Order,
+                            Product = s.Product,
+                            ValidFrom = s.ValidFrom,
+                            ValidTo = s.ValidTo,
+                            OrderId = s.OrderId,
+                            ProductId = s.ProductId
+                        };
+            return query.ToList();
         }
 
         public OrderDetail GetById(int id)
         {
-            using (var db = new MobilizeYouEntities())
+            var s = _db.OrderDetails.Find(id);
+            var od = new OrderDetail
             {
-                var s = db.OrderDetails.Find(id);
-                var od = new OrderDetail
-                {
-                    Id = s.Id,
-                    Order = s.Order,
-                    Product = s.Product,
-                    ValidFrom = s.ValidFrom,
-                    ValidTo = s.ValidTo,
-                    OrderId = s.OrderId,
-                    ProductId = s.ProductId
-                };
-                return od;
-            }
+                Id = s.Id,
+                Order = s.Order,
+                Product = s.Product,
+                ValidFrom = s.ValidFrom,
+                ValidTo = s.ValidTo,
+                OrderId = s.OrderId,
+                ProductId = s.ProductId
+            };
+            return od;
         }
 
         public void Add(OrderDetail obj)
@@ -78,6 +77,21 @@ namespace MobilizeYou.DAL
                 db.Entry(obj).State = EntityState.Modified;
                 // other changed properties
                 db.SaveChanges();
+            }
+        }
+
+        public List<OrderDetail> GetOrderDetailsByDate(DateTime dateFrom, DateTime dateTo)
+        {
+            try
+            {
+                // Logic: startA <= endB && startB <= endA
+                var query = _db.OrderDetails.Where(x => x.ValidFrom <= dateTo && dateFrom <= x.ValidTo).ToList();
+
+                return query.Count == 0 ? null : query;
+            }
+            catch
+            {
+                return null;
             }
         }
     }

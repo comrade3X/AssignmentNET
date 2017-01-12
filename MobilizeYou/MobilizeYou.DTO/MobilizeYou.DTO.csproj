@@ -84,6 +84,7 @@
     <Compile Include="OrderDetail.cs">
       <DependentUpon>ModelMobilizeYou.tt</DependentUpon>
     </Compile>
+    <Compile Include="OrderDetailsDto.cs" />
     <Compile Include="Product.cs">
       <DependentUpon>ModelMobilizeYou.tt</DependentUpon>
     </Compile>
@@ -93,7 +94,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
     <EntityDeploy Include="ModelMobilizeYou.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ModelMobilizeYou.Designer.cs</LastGenOutput>

@@ -32,7 +32,7 @@ namespace MobilizeYou
             }
             catch (Exception ex)
             {
-                MessageBox.Show(Resources.FormLogin_buttonLogin_Click_Error);
+                MessageBox.Show(ex.Message);
             }
         }
 
