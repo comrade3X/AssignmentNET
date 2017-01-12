@@ -13,9 +13,11 @@ namespace MobilizeYou
 {
     public partial class FormMain : Form
     {
+        private int customerId = 0;
         public FormMain(Membership membership)
         {
             InitializeComponent();
+            customerId = membership.Employee.Id;
             HideMenu(membership);
         }
 
@@ -74,12 +76,20 @@ namespace MobilizeYou
         private void createOrderToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DisposeAll();
-            this.ShowRight<FormOrder2>();
+            //this.ShowRight<FormOrder2>();
+            FormOrder2 frFormOrder2 = new FormOrder2(customerId);
+            frFormOrder2.MdiParent = this;
+            frFormOrder2.Show();
         }
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void listOrdersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+          
         }
     }
 }

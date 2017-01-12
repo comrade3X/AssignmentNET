@@ -19,10 +19,12 @@ namespace MobilizeYou
         public EmployeeServices EmployeeServices;
         public OrderServices OrderServices;
 
-        public FormOrder2()
+        private int _empId = 0;
+
+        public FormOrder2(int customerId)
         {
             InitializeComponent();
-
+            _empId = customerId;
             CategoriesServices = new CategoriesServices();
             ProductServices = new ProductServices();
             OrderDetailsServices = new OrderDetailsServices();
@@ -114,6 +116,7 @@ namespace MobilizeYou
             textBoxIdentityCard.Text = string.Empty;
             textBoxDriveLicence.Text = string.Empty;
             textBoxPhoneNumber.Text = string.Empty;
+            _listOrderDetails = null;
         }
 
         /// <summary>
@@ -273,15 +276,16 @@ namespace MobilizeYou
                 var order = new Order
                 {
                     Customer = customer,
-                    Seller = 1,
-                    Employee = EmployeeServices.GetById(1),
+                    Seller = _empId,
                     CreatedDate = DateTime.Now,
                     TotalPrice = totalPrice,
                     OrderDetails = listOrderDetails
                 };
 
                 OrderServices.Add(order);
-                MessageBox.Show("Order success");
+                FormOrderBilling frmOrderBilling = new FormOrderBilling(order);
+                frmOrderBilling.StartPosition = FormStartPosition.CenterScreen;
+                frmOrderBilling.Show();
                 RefreshAll();
             }
             catch (Exception ex)

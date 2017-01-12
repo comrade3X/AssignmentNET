@@ -27,6 +27,7 @@ namespace MobilizeYou
                     MessageBox.Show(Resources.FormLogin_buttonLogin_Click_User_name_or_Password_is_invalid_);
                     return;
                 }
+
                 FormMain frmMain = new FormMain(membership);
                 frmMain.Show();
             }

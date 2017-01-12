@@ -121,6 +121,7 @@
             this.buttonAdd.TabIndex = 4;
             this.buttonAdd.Text = "Add New";
             this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Visible = false;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // textBoxPhoneNumber
