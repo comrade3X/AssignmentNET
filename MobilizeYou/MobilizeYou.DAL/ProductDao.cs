@@ -25,7 +25,8 @@ namespace MobilizeYou.DAL
                                 Model = s.Model,
                                 AddOns = s.AddOns,
                                 RentPerDay = s.RentPerDay,
-                                Category = s.Category
+                                Category = s.Category,
+                                CategoryId = s.CategoryId
                             };
                 return query.ToList();
             }
@@ -45,7 +46,8 @@ namespace MobilizeYou.DAL
                     Model = s.Model,
                     AddOns = s.AddOns,
                     RentPerDay = s.RentPerDay,
-                    Category = s.Category
+                    Category = s.Category,
+                    CategoryId = s.CategoryId
                 };
                 return product;
             }
@@ -79,6 +81,8 @@ namespace MobilizeYou.DAL
 
             using (var db = new MobilizeYouEntities())
             {
+                db.Entry(obj).State = EntityState.Modified;
+                // other changed properties
                 db.SaveChanges();
             }
         }

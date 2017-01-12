@@ -8,3 +8,13 @@ c:\users\tien dung\documents\visual studio 2015\Projects\MobilizeYou\MobilizeYou
 c:\users\tien dung\documents\visual studio 2015\Projects\MobilizeYou\MobilizeYou.DAL\obj\Debug\MobilizeYou.DAL.csprojResolveAssemblyReference.cache
 c:\users\tien dung\documents\visual studio 2015\Projects\MobilizeYou\MobilizeYou.DAL\obj\Debug\MobilizeYou.DAL.dll
 c:\users\tien dung\documents\visual studio 2015\Projects\MobilizeYou\MobilizeYou.DAL\obj\Debug\MobilizeYou.DAL.pdb
+C:\Users\Tien Dung\Documents\Visual Studio 2015\Projects\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou.DAL\bin\Debug\MobilizeYou.DAL.dll.config
+C:\Users\Tien Dung\Documents\Visual Studio 2015\Projects\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou.DAL\bin\Debug\MobilizeYou.DAL.dll
+C:\Users\Tien Dung\Documents\Visual Studio 2015\Projects\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou.DAL\bin\Debug\MobilizeYou.DAL.pdb
+C:\Users\Tien Dung\Documents\Visual Studio 2015\Projects\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou.DAL\bin\Debug\EntityFramework.dll
+C:\Users\Tien Dung\Documents\Visual Studio 2015\Projects\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou.DAL\bin\Debug\MobilizeYou.DTO.dll
+C:\Users\Tien Dung\Documents\Visual Studio 2015\Projects\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou.DAL\bin\Debug\MobilizeYou.DTO.pdb
+C:\Users\Tien Dung\Documents\Visual Studio 2015\Projects\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou.DAL\bin\Debug\EntityFramework.xml
+C:\Users\Tien Dung\Documents\Visual Studio 2015\Projects\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou.DAL\obj\Debug\MobilizeYou.DAL.csprojResolveAssemblyReference.cache
+C:\Users\Tien Dung\Documents\Visual Studio 2015\Projects\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou.DAL\obj\Debug\MobilizeYou.DAL.dll
+C:\Users\Tien Dung\Documents\Visual Studio 2015\Projects\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou.DAL\obj\Debug\MobilizeYou.DAL.pdb

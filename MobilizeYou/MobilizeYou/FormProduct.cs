@@ -105,8 +105,7 @@ namespace MobilizeYou
                 product.AddOns = textBoxAddons.Text;
                 product.RentPerDay = Convert.ToDecimal(numericBoxRentPrice.Text);
                 product.YearOfRegistion = comboBoxYear.SelectedValue.ToString();
-                product.Category = _categoriesServices.GetById(Convert.ToInt32(comboBoxCategory.SelectedValue));
-               
+                product.Category = new Category { Id = Convert.ToInt32(comboBoxCategory.SelectedValue) };
                 _productServices.Update(product);
                 Refresh();
                 FillData();
