@@ -124,6 +124,24 @@ namespace MobilizeYou.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Error.
+        /// </summary>
+        internal static string FormLogin_buttonLogin_Click_Error {
+            get {
+                return ResourceManager.GetString("FormLogin_buttonLogin_Click_Error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to User name or Password is invalid..
+        /// </summary>
+        internal static string FormLogin_buttonLogin_Click_User_name_or_Password_is_invalid_ {
+            get {
+                return ResourceManager.GetString("FormLogin_buttonLogin_Click_User_name_or_Password_is_invalid_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Are you sure?.
         /// </summary>
         internal static string FormProduct_deleteToolStripMenuItem_Click_Are_you_sure_ {

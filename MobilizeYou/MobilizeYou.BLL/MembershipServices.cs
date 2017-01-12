@@ -31,5 +31,16 @@ namespace MobilizeYou.BLL
         {
             _membershipDao.Update(obj);
         }
+
+        public Membership Login(string userName, string passWord)
+        {
+            if (string.IsNullOrEmpty(userName) || string.IsNullOrEmpty(passWord))
+            {
+                return null;
+            }
+
+            var res = _membershipDao.Login(userName, passWord);
+            return res;
+        }
     }
 }

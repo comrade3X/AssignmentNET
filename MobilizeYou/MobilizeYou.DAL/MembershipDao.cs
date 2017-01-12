@@ -80,5 +80,26 @@ namespace MobilizeYou.DAL
                 db.SaveChanges();
             }
         }
+
+        public Membership Login(string userName, string passWord)
+        {
+            using (var db = new MobilizeYouEntities())
+            {
+                var s = db.Memberships.FirstOrDefault(x => userName.Equals(x.Username) && passWord.Equals(x.Password));
+                if (s == null) return null;
+
+                var res = new Membership
+                {
+                    Id = s.Id,
+                    Username = s.Username,
+                    Password = s.Password,
+                    EmployeeId = s.EmployeeId,
+                    Employee = s.Employee,
+                    Role = s.Role,
+                    RoleId = s.RoleId
+                };
+                return res;
+            }
+        }
     }
 }

@@ -153,4 +153,10 @@
   <data name="FormProduct_Refresh__0_0" xml:space="preserve">
     <value>0.0</value>
   </data>
+  <data name="FormLogin_buttonLogin_Click_User_name_or_Password_is_invalid_" xml:space="preserve">
+    <value>User name or Password is invalid.</value>
+  </data>
+  <data name="FormLogin_buttonLogin_Click_Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
 </root>

@@ -76,5 +76,10 @@ namespace MobilizeYou
             DisposeAll();
             this.ShowRight<FormOrder>();
         }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }

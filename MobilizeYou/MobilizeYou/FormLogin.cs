@@ -1,16 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using MobilizeYou.Properties;
 
 namespace MobilizeYou
 {
-    using DTO;
     using BLL;
     public partial class FormLogin : Form
     {
@@ -23,13 +16,23 @@ namespace MobilizeYou
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            var userName = textBoxUsername.Text;
-            var pw = textBoxPassword.Text;
-            var membership = _membershipServices.GetAll().FirstOrDefault(x => userName.Equals(x.Username) && pw.Equals(x.Password));
-            if (membership != null)
+            try
             {
+                var userName = textBoxUsername.Text;
+                var pw = textBoxPassword.Text;
+                var membership = _membershipServices.Login(userName, pw);
+
+                if (membership == null)
+                {
+                    MessageBox.Show(Resources.FormLogin_buttonLogin_Click_User_name_or_Password_is_invalid_);
+                    return;
+                }
                 FormMain frmMain = new FormMain(membership);
                 frmMain.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(Resources.FormLogin_buttonLogin_Click_Error);
             }
         }
 
