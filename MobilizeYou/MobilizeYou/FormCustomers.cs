@@ -72,7 +72,6 @@ namespace MobilizeYou
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-                throw;
             }
         }
 
@@ -94,7 +93,6 @@ namespace MobilizeYou
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-                throw;
             }
         }
 
@@ -111,11 +109,12 @@ namespace MobilizeYou
                 if (dr == DialogResult.Yes)
                 {
                     _customersSvervices.Delete(customer);
+                    Refresh();
                 }
                 FillData();
                 MessageBox.Show(Resources.FormProduct_deleteToolStripMenuItem_Click_Delete_Successfully_);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }

@@ -36,7 +36,7 @@ namespace MobilizeYou
         private void listEmployeeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DisposeAll();
-            //this.ShowRight<FormEmployee>();
+            this.ShowRight<FormEmployee>();
         }
 
         private void membershipToolStripMenuItem_Click(object sender, EventArgs e)
