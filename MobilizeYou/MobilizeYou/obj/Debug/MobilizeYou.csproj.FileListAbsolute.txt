@@ -45,3 +45,34 @@ C:\Users\Tien Dung\Documents\Visual Studio 2015\Projects\AssignmentNET.git\trunk
 C:\Users\Tien Dung\Documents\Visual Studio 2015\Projects\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou\obj\Debug\MobilizeYou.pdb
 C:\Users\Tien Dung\Documents\Visual Studio 2015\Projects\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou\obj\Debug\MobilizeYou.FormOrderBilling.resources
 C:\Users\Tien Dung\Documents\Visual Studio 2015\Projects\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou\obj\Debug\MobilizeYou.FormListOrders.resources
+D:\FPT\Documents\COURSE\Programming in .NET\Assignment\Code\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou\bin\Debug\MobilizeYou.exe.config
+D:\FPT\Documents\COURSE\Programming in .NET\Assignment\Code\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou\obj\Debug\MobilizeYou.exe
+D:\FPT\Documents\COURSE\Programming in .NET\Assignment\Code\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou\obj\Debug\MobilizeYou.pdb
+D:\FPT\Documents\COURSE\Programming in .NET\Assignment\Code\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou\bin\Debug\MobilizeYou.exe
+D:\FPT\Documents\COURSE\Programming in .NET\Assignment\Code\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou\bin\Debug\MobilizeYou.pdb
+D:\FPT\Documents\COURSE\Programming in .NET\Assignment\Code\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou\bin\Debug\EntityFramework.dll
+D:\FPT\Documents\COURSE\Programming in .NET\Assignment\Code\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou\bin\Debug\EntityFramework.SqlServer.dll
+D:\FPT\Documents\COURSE\Programming in .NET\Assignment\Code\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou\bin\Debug\MobilizeYou.BLL.dll
+D:\FPT\Documents\COURSE\Programming in .NET\Assignment\Code\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou\bin\Debug\MobilizeYou.DAL.dll
+D:\FPT\Documents\COURSE\Programming in .NET\Assignment\Code\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou\bin\Debug\MobilizeYou.DTO.dll
+D:\FPT\Documents\COURSE\Programming in .NET\Assignment\Code\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou\bin\Debug\MobilizeYou.BLL.pdb
+D:\FPT\Documents\COURSE\Programming in .NET\Assignment\Code\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou\bin\Debug\MobilizeYou.DAL.pdb
+D:\FPT\Documents\COURSE\Programming in .NET\Assignment\Code\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou\bin\Debug\MobilizeYou.DTO.pdb
+D:\FPT\Documents\COURSE\Programming in .NET\Assignment\Code\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou\bin\Debug\EntityFramework.xml
+D:\FPT\Documents\COURSE\Programming in .NET\Assignment\Code\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou\bin\Debug\EntityFramework.SqlServer.xml
+D:\FPT\Documents\COURSE\Programming in .NET\Assignment\Code\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou\obj\Debug\MobilizeYou.csprojResolveAssemblyReference.cache
+D:\FPT\Documents\COURSE\Programming in .NET\Assignment\Code\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou\obj\Debug\MobilizeYou.Form1.resources
+D:\FPT\Documents\COURSE\Programming in .NET\Assignment\Code\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou\obj\Debug\MobilizeYou.FormCustomers.resources
+D:\FPT\Documents\COURSE\Programming in .NET\Assignment\Code\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou\obj\Debug\MobilizeYou.FormEmployee.resources
+D:\FPT\Documents\COURSE\Programming in .NET\Assignment\Code\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou\obj\Debug\MobilizeYou.FormListOrders.resources
+D:\FPT\Documents\COURSE\Programming in .NET\Assignment\Code\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou\obj\Debug\MobilizeYou.FormMain.resources
+D:\FPT\Documents\COURSE\Programming in .NET\Assignment\Code\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou\obj\Debug\MobilizeYou.FormMembership.resources
+D:\FPT\Documents\COURSE\Programming in .NET\Assignment\Code\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou\obj\Debug\MobilizeYou.FormOrder.resources
+D:\FPT\Documents\COURSE\Programming in .NET\Assignment\Code\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou\obj\Debug\MobilizeYou.FormOrder2.resources
+D:\FPT\Documents\COURSE\Programming in .NET\Assignment\Code\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou\obj\Debug\MobilizeYou.FormOrderBilling.resources
+D:\FPT\Documents\COURSE\Programming in .NET\Assignment\Code\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou\obj\Debug\MobilizeYou.FormProduct.resources
+D:\FPT\Documents\COURSE\Programming in .NET\Assignment\Code\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou\obj\Debug\MobilizeYou.Properties.Resources.resources
+D:\FPT\Documents\COURSE\Programming in .NET\Assignment\Code\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou\obj\Debug\MobilizeYou.csproj.GenerateResource.Cache
+E:\Google Drive (FPT)\Documents\COURSE\Programming in .NET\Assignment\Code\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou\bin\Debug\MobilizeYou.exe.config
+E:\Google Drive (FPT)\Documents\COURSE\Programming in .NET\Assignment\Code\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou\obj\Debug\MobilizeYou.exe
+E:\Google Drive (FPT)\Documents\COURSE\Programming in .NET\Assignment\Code\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou\obj\Debug\MobilizeYou.pdb
