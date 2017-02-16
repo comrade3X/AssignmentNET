@@ -136,13 +136,17 @@ namespace MobilizeYou
                     {
                         _productServices.Delete(product);
                     }
+                    else
+                    {
+                        return;
+                    }
                     FillData();
                     MessageBox.Show(Resources.FormProduct_deleteToolStripMenuItem_Click_Delete_Successfully_);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Can not delete this record.");
             }
         }
 

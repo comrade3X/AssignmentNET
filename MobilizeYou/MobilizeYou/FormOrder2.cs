@@ -124,22 +124,21 @@ namespace MobilizeYou
         /// </summary>
         /// <param name="fullName"></param>
         /// <param name="identityCard"></param>
-        /// <param name="driveLicence"></param>
         /// <param name="phone"></param>
         /// <returns></returns>
-        private bool Validate(string fullName, string identityCard, string driveLicence, string phone)
+        private bool Validate(string fullName, string identityCard, string phone)
         {
             var validate = new List<string> { fullName, identityCard, phone };
             if (validate.Any(x => x.Equals(string.Empty)))
             {
                 MessageBox.Show(@"Please enter all fields mandatory (with""*"").",
-                    Resources.FormProduct_deleteToolStripMenuItem_Click_Warning, MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                   "Warning", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 return false;
             }
             if (!Helper.IsPhoneNumber(phone))
             {
                 MessageBox.Show(@"Please enter valid phone number",
-                    Resources.FormProduct_deleteToolStripMenuItem_Click_Warning, MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    "Warning", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 return false;
             }
             return true;
@@ -240,7 +239,7 @@ namespace MobilizeYou
             var phone = textBoxPhoneNumber.Text;
 
             //Validate
-            var fieldValid = Validate(fullName, identityCard, driveLicence, phone);
+            var fieldValid = Validate(fullName, identityCard, phone);
             if (!fieldValid)
             {
                 return;

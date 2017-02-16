@@ -105,7 +105,8 @@ namespace MobilizeYou
                 var customer = _customersSvervices.GetById(customerId);
                 customer.Orders = null;
 
-                var dr = MessageBox.Show(Resources.FormCustomers_deleteToolStripMenuItem_Click_Are_you_sure_, Resources.FormProduct_deleteToolStripMenuItem_Click_Warning, MessageBoxButtons.YesNo);
+                var dr = MessageBox.Show(Resources.FormCustomers_deleteToolStripMenuItem_Click_Are_you_sure_,
+                    Resources.FormProduct_deleteToolStripMenuItem_Click_Warning, MessageBoxButtons.YesNo);
                 if (dr == DialogResult.Yes)
                 {
                     _customersSvervices.Delete(customer);

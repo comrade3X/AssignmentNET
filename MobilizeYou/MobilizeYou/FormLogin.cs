@@ -24,7 +24,7 @@ namespace MobilizeYou
 
                 if (membership == null)
                 {
-                    MessageBox.Show(Resources.FormLogin_buttonLogin_Click_User_name_or_Password_is_invalid_);
+                    MessageBox.Show("User name or Password invalid.");
                     return;
                 }
 

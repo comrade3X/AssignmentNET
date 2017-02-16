@@ -6,13 +6,13 @@ c:\users\tien dung\documents\visual studio 2015\Projects\MobilizeYou\MobilizeYou
 c:\users\tien dung\documents\visual studio 2015\Projects\MobilizeYou\MobilizeYou.DTO\obj\Debug\MobilizeYou.DTO.csprojResolveAssemblyReference.cache
 c:\users\tien dung\documents\visual studio 2015\Projects\MobilizeYou\MobilizeYou.DTO\obj\Debug\MobilizeYou.DTO.dll
 c:\users\tien dung\documents\visual studio 2015\Projects\MobilizeYou\MobilizeYou.DTO\obj\Debug\MobilizeYou.DTO.pdb
+C:\Users\Tien Dung\Documents\Visual Studio 2015\Projects\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou.DTO\bin\Debug\MobilizeYou.DTO.dll.config
 C:\Users\Tien Dung\Documents\Visual Studio 2015\Projects\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou.DTO\bin\Debug\MobilizeYou.DTO.dll
 C:\Users\Tien Dung\Documents\Visual Studio 2015\Projects\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou.DTO\bin\Debug\MobilizeYou.DTO.pdb
 C:\Users\Tien Dung\Documents\Visual Studio 2015\Projects\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou.DTO\bin\Debug\EntityFramework.dll
 C:\Users\Tien Dung\Documents\Visual Studio 2015\Projects\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou.DTO\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Tien Dung\Documents\Visual Studio 2015\Projects\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou.DTO\bin\Debug\EntityFramework.xml
 C:\Users\Tien Dung\Documents\Visual Studio 2015\Projects\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou.DTO\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Tien Dung\Documents\Visual Studio 2015\Projects\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou.DTO\obj\Debug\MobilizeYou.DTO.csprojResolveAssemblyReference.cache
 C:\Users\Tien Dung\Documents\Visual Studio 2015\Projects\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou.DTO\obj\Debug\MobilizeYou.DTO.dll
 C:\Users\Tien Dung\Documents\Visual Studio 2015\Projects\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou.DTO\obj\Debug\MobilizeYou.DTO.pdb
-C:\Users\Tien Dung\Documents\Visual Studio 2015\Projects\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou.DTO\bin\Debug\MobilizeYou.DTO.dll.config
-C:\Users\Tien Dung\Documents\Visual Studio 2015\Projects\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou.DTO\obj\Debug\MobilizeYou.DTO.csprojResolveAssemblyReference.cache
