@@ -117,12 +117,16 @@ namespace MobilizeYou.BLL
         {
 
             //Logic: startA >= startB && endB >= endA
-            var listSearch = _orderDetailDao.GetAll().Where(x => x.ValidFrom >= dateFr && dateTo >= x.ValidTo).GroupBy(x => x.Order.Id).Select(x => x.First());
+            var listSearch = _orderDetailDao.GetAll()
+                .Where(x => x.ValidFrom >= dateFr && dateTo >= x.ValidTo)
+                .GroupBy(x => x.Order.Id)
+                .Select(x => x.First());
 
             //Search by customer information
             if (!string.IsNullOrEmpty(customerInfo))
             {
-                listSearch = listSearch.Where(x => x.Order.Customer.FullName.ToLower().Contains(customerInfo.ToLower()));
+                listSearch = listSearch.Where(x => x.Order.Customer.FullName.ToLower()
+                .Contains(customerInfo.ToLower()));
             }
 
             var reg = new Regex(@" ^\d$");

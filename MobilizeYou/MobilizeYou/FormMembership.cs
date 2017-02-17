@@ -139,6 +139,11 @@ namespace MobilizeYou
                 {
                     _membershipServices.Delete(membership);
                 }
+                else
+                {
+                    return;
+                }
+
                 FillData();
                 MessageBox.Show(Resources.FormProduct_deleteToolStripMenuItem_Click_Delete_Successfully_);
             }

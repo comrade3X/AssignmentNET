@@ -140,6 +140,11 @@ namespace MobilizeYou
                 {
                     _employeeServices.Delete(employee);
                 }
+                else
+                {
+                    return;
+                }
+
                 FillData();
                 MessageBox.Show(Resources.FormProduct_deleteToolStripMenuItem_Click_Delete_Successfully_);
             }
