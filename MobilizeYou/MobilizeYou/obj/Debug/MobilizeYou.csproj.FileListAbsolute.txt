@@ -57,8 +57,11 @@ C:\Users\Tien Dung\Documents\Visual Studio 2015\Projects\AssignmentNET.git\trunk
 C:\Users\Tien Dung\Documents\Visual Studio 2015\Projects\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou\bin\Debug\MobilizeYou.DAL.dll
 C:\Users\Tien Dung\Documents\Visual Studio 2015\Projects\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou\bin\Debug\MobilizeYou.DTO.dll
 C:\Users\Tien Dung\Documents\Visual Studio 2015\Projects\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou\bin\Debug\MobilizeYou.BLL.pdb
+C:\Users\Tien Dung\Documents\Visual Studio 2015\Projects\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou\bin\Debug\MobilizeYou.BLL.dll.config
 C:\Users\Tien Dung\Documents\Visual Studio 2015\Projects\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou\bin\Debug\MobilizeYou.DAL.pdb
+C:\Users\Tien Dung\Documents\Visual Studio 2015\Projects\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou\bin\Debug\MobilizeYou.DAL.dll.config
 C:\Users\Tien Dung\Documents\Visual Studio 2015\Projects\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou\bin\Debug\MobilizeYou.DTO.pdb
+C:\Users\Tien Dung\Documents\Visual Studio 2015\Projects\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou\bin\Debug\MobilizeYou.DTO.dll.config
 C:\Users\Tien Dung\Documents\Visual Studio 2015\Projects\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou\bin\Debug\EntityFramework.xml
 C:\Users\Tien Dung\Documents\Visual Studio 2015\Projects\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Tien Dung\Documents\Visual Studio 2015\Projects\AssignmentNET.git\trunk\MobilizeYou\MobilizeYou\obj\Debug\MobilizeYou.csprojResolveAssemblyReference.cache

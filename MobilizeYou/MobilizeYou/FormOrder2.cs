@@ -35,7 +35,7 @@ namespace MobilizeYou
             FillData();
         }
 
-        private void comboBoxCategory_SelectionChangeCommitted(object sender, EventArgs e)
+        private void ComboBoxCategory_SelectionChangeCommitted(object sender, EventArgs e)
         {
             CascadeCb(comboBoxCategory.Text);
         }
@@ -146,7 +146,7 @@ namespace MobilizeYou
 
         #endregion
 
-        private void buttonCheck_Click(object sender, EventArgs e)
+        private void ButtonCheck_Click(object sender, EventArgs e)
         {
             try
             {
@@ -181,7 +181,7 @@ namespace MobilizeYou
             }
         }
 
-        private void addOrderToolStripMenuItem_Click(object sender, EventArgs e)
+        private void AddOrderToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
             {
@@ -291,6 +291,11 @@ namespace MobilizeYou
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void dataGridViewOrderDetails_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            MessageBox.Show("Test");
         }
     }
 }

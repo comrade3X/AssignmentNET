@@ -140,11 +140,12 @@ namespace MobilizeYou
                     {
                         return;
                     }
+
                     FillData();
                     MessageBox.Show(Resources.FormProduct_deleteToolStripMenuItem_Click_Delete_Successfully_);
                 }
             }
-            catch (Exception ex)
+            catch
             {
                 MessageBox.Show("Can not delete this record.");
             }
@@ -176,20 +177,19 @@ namespace MobilizeYou
         private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             var dataGridViewRow = dataGridView1.CurrentRow;
-            if (dataGridViewRow != null)
-            {
-                var productId = Convert.ToInt32(dataGridViewRow.Cells[0].Value);
-                var product = _productServices.GetById(productId);
+            if (dataGridViewRow == null) return;
 
-                textBoxId.Text = product.Id.ToString();
-                textBoxName.Text = product.Name;
-                textBoxMake.Text = product.Make;
-                textBoxModel.Text = product.Model;
-                textBoxAddons.Text = product.AddOns;
-                numericBoxRentPrice.Text = product.RentPerDay.ToString(CultureInfo.InvariantCulture);
-                comboBoxYear.Text = product.YearOfRegistion;
-                comboBoxCategory.Text = product.Category.Name;
-            }
+            var productId = Convert.ToInt32(dataGridViewRow.Cells[0].Value);
+            var product = _productServices.GetById(productId);
+
+            textBoxId.Text = product.Id.ToString();
+            textBoxName.Text = product.Name;
+            textBoxMake.Text = product.Make;
+            textBoxModel.Text = product.Model;
+            textBoxAddons.Text = product.AddOns;
+            numericBoxRentPrice.Text = product.RentPerDay.ToString(CultureInfo.InvariantCulture);
+            comboBoxYear.Text = product.YearOfRegistion;
+            comboBoxCategory.Text = product.Category.Name;
         }
 
         private void textBoxSearch_TextChanged(object sender, EventArgs e)

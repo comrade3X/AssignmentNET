@@ -230,6 +230,7 @@
             this.dataGridViewOrderDetails.Name = "dataGridViewOrderDetails";
             this.dataGridViewOrderDetails.Size = new System.Drawing.Size(592, 299);
             this.dataGridViewOrderDetails.TabIndex = 0;
+            this.dataGridViewOrderDetails.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewOrderDetails_CellContentClick);
             // 
             // splitContainer1
             // 
@@ -317,7 +318,7 @@
             this.buttonCheck.TabIndex = 6;
             this.buttonCheck.Text = "Check";
             this.buttonCheck.UseVisualStyleBackColor = true;
-            this.buttonCheck.Click += new System.EventHandler(this.buttonCheck_Click);
+            this.buttonCheck.Click += new System.EventHandler(this.ButtonCheck_Click);
             // 
             // dateTimePickerTo
             // 
@@ -348,7 +349,7 @@
             this.comboBoxCategory.Name = "comboBoxCategory";
             this.comboBoxCategory.Size = new System.Drawing.Size(258, 21);
             this.comboBoxCategory.TabIndex = 1;
-            this.comboBoxCategory.SelectionChangeCommitted += new System.EventHandler(this.comboBoxCategory_SelectionChangeCommitted);
+            this.comboBoxCategory.SelectionChangeCommitted += new System.EventHandler(this.ComboBoxCategory_SelectionChangeCommitted);
             // 
             // label5
             // 
@@ -425,14 +426,14 @@
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addOrderToolStripMenuItem1});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(153, 48);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(130, 26);
             // 
             // addOrderToolStripMenuItem1
             // 
             this.addOrderToolStripMenuItem1.Name = "addOrderToolStripMenuItem1";
-            this.addOrderToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.addOrderToolStripMenuItem1.Size = new System.Drawing.Size(129, 22);
             this.addOrderToolStripMenuItem1.Text = "Add Order";
-            this.addOrderToolStripMenuItem1.Click += new System.EventHandler(this.addOrderToolStripMenuItem_Click);
+            this.addOrderToolStripMenuItem1.Click += new System.EventHandler(this.AddOrderToolStripMenuItem_Click);
             // 
             // addOrderToolStripMenuItem
             // 
